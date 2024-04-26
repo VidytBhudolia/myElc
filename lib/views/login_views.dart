@@ -81,7 +81,7 @@ class _LoginViewState extends State<LoginView> {
                 Navigator.of(context)
                     .pushNamedAndRemoveUntil('/register/', (route) => false);
               },
-              child: Text('Not Registered? Register Here!'),
+              child: Text('Not Registered? Register Here! '),
             ),
           )
         ],
