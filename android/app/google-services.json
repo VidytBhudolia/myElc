@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "18409244577",
+    "project_id": "myelc-d7498",
+    "storage_bucket": "myelc-d7498.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18409244577:android:bca5b570fc78bdaf306de0",
+        "android_client_info": {
+          "package_name": "com.example.my_elc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaJ-qWD2fS4-TtzYXxtk7DjJvAorIyQJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
