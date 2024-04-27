@@ -105,10 +105,6 @@ class MyApp extends State<Firstpage> {
               const SizedBox(height: 30),
               const Column(
                 children: [
-                  Text(
-                    'default:{ visawo2054@togito.com : 123456789 }',
-                    style: TextStyle(fontSize: 24),
-                  ),
                   SizedBox(height: 10),
                   Text(
                     'Shreyas Mahajan (102317085)',
