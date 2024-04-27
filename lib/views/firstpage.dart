@@ -40,7 +40,7 @@ class MyApp extends State<Firstpage> {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)
-                      .pushNamedAndRemoveUntil('/register/', (route) => false);
+                      .pushNamedAndRemoveUntil('/login/', (route) => false);
                   debugPrint('Login button pressed');
                 },
                 style: ButtonStyle(
@@ -73,7 +73,7 @@ class MyApp extends State<Firstpage> {
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)
-                      .pushNamedAndRemoveUntil('/login/', (route) => false);
+                      .pushNamedAndRemoveUntil('/register/', (route) => false);
                   debugPrint('Sign Up button pressed');
                 },
                 style: ButtonStyle(
