@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mynotes/firebase_options.dart';
+import 'package:mynotes/views/firstpage.dart';
 import 'package:mynotes/views/home.dart';
 import 'package:mynotes/views/login_views.dart';
 import 'package:mynotes/views/notes_view.dart';
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
           options: DefaultFirebaseOptions.currentPlatform),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          return const LoginView();
+          return Firstpage();
         } else {
           return const CircularProgressIndicator();
         }

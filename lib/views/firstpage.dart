@@ -12,22 +12,24 @@ class MyApp extends State<Firstpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: const DecorationImage(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
             image: AssetImage("assets/background_image.png"),
             // image: AssetImage("assets/bg_black.png"),
 
             fit: BoxFit.cover,
           ),
         ),
-        child: Center( // Wrap the Column with Center widget
+        child: Center(
+          // Wrap the Column with Center widget
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center, // Center align the children vertically
+            crossAxisAlignment: CrossAxisAlignment
+                .center, // Center align the children vertically
             children: <Widget>[
-              Text(
+              const Text(
                 'WELCOME',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 0, 0, 0),
@@ -37,16 +39,17 @@ class MyApp extends State<Firstpage> {
               SizedBox(height: 60),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                          '/register/', (route) => false);
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil('/login/', (route) => false);
                   debugPrint('Login button pressed');
                 },
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.green[500]!),
-                  padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
-                    (states) =>
-                        const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  padding:
+                      MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
+                    (states) => const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 20),
                   ),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
@@ -69,16 +72,17 @@ class MyApp extends State<Firstpage> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                          '/login/', (route) => false);
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil('/register/', (route) => false);
                   debugPrint('Sign Up button pressed');
                 },
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.blue[500]!),
-                  padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
-                    (states) =>
-                        const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  padding:
+                      MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
+                    (states) => const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 20),
                   ),
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {
