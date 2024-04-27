@@ -46,7 +46,7 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                 },
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue[500]!),
+                      MaterialStateProperty.all<Color>(Colors.green[500]!),
                   padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry?>(
                     (states) =>
                         const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
