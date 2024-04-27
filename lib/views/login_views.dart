@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:mynotes/firebase_options.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -65,6 +63,8 @@ class _LoginViewState extends State<LoginView> {
                   if (userCredential.user!.emailVerified) {
                     Navigator.of(context)
                         .pushNamedAndRemoveUntil('/notes/', (_) => false);
+                    // Navigator.of(context)
+                    //     .pushNamedAndRemoveUntil('/home/', (_) => false);
                   } else {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                         '/verify_email/', (_) => false);
