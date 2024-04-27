@@ -34,7 +34,7 @@ class _RegistrationViewState extends State<RegistrationView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Register"),
+        title: const Text("Register"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
@@ -58,33 +58,33 @@ class _RegistrationViewState extends State<RegistrationView> {
             ),
             child: Column(
               children: [
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 TextField(
                   controller: _email,
                   enableSuggestions: false,
                   autocorrect: false,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(hintText: "Email "),
+                  decoration: const InputDecoration(hintText: "Email "),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextField(
                   controller: _password,
                   enableSuggestions: false,
                   autocorrect: false,
                   obscureText: true,
-                  decoration: InputDecoration(hintText: "Password "),
+                  decoration: const InputDecoration(hintText: "Password "),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Center(
                   child: TextButton(
                     onPressed: () {
                       Navigator.of(context)
                           .pushNamedAndRemoveUntil('/login/', (route) => false);
                     },
-                    child: Text('Already have an account? Login!'),
+                    child: const Text('Already have an account? Login!'),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:

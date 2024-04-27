@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:mynotes/firebase_options.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -34,7 +32,7 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
@@ -58,30 +56,30 @@ class _LoginViewState extends State<LoginView> {
             ),
             child: Column(
               children: [
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 TextField(
                   controller: _email,
                   enableSuggestions: false,
                   autocorrect: false,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(hintText: "Email "),
+                  decoration: const InputDecoration(hintText: "Email "),
                 ),
-                SizedBox(height: 20), // Adjusted height
+                const SizedBox(height: 20), // Adjusted height
                 TextField(
                   controller: _password,
                   enableSuggestions: false,
                   autocorrect: false,
                   obscureText: true,
-                  decoration: InputDecoration(hintText: "Password "),
+                  decoration: const InputDecoration(hintText: "Password "),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Center(
                   child: TextButton(
                     onPressed: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           '/register/', (route) => false);
                     },
-                    child: Text('Not Registered? Register Here! '),
+                    child: const Text('Not Registered? Register Here! '),
                   ),
                 ),
                 const SizedBox(height: 10),
