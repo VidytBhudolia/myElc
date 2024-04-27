@@ -66,7 +66,8 @@ Future<bool> showLogOutDialog(BuildContext context) {
           ),
           TextButton(
             onPressed: () {
-              Navigator.of(context).pop(true);
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil('/first/', (_) => false);
             },
             child: const Text("Logout"),
           ),

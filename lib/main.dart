@@ -14,6 +14,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
       routes: {
         '/register/': (context) => const RegistrationView(),
@@ -21,6 +22,7 @@ void main() {
         '/verify_email/': (context) => const VerifyEmailView(),
         '/notes/': (context) => const NotesView(),
         '/home/': (context) => const LandingPage(),
+        '/first/': (context) => const Firstpage(),
       }));
 }
 

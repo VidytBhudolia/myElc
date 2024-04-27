@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mynotes/firebase_options.dart';
 
@@ -9,7 +10,6 @@ class LoginView extends StatefulWidget {
   @override
   State<LoginView> createState() => _LoginViewState();
 }
-
 
 class _LoginViewState extends State<LoginView> {
   late final TextEditingController _email;
@@ -103,29 +103,31 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     onPressed: () async {
-                    final email = _email.text;
-                    final password = _password.text;
-                    try {
-                      final userCredential = await FirebaseAuth.instance
-                          .signInWithEmailAndPassword(
-                              email: email, password: password);
-                      print(userCredential);
-                    } on FirebaseAuthException catch (e) {
-                      if (e.code == 'user-not-found') {
-                        print('No user found for that email.');
-                      } else if (e.code == 'wrong-password') {
-                        print('Wrong password provided for that user.');
-                      } else {
-                        print(e.code);
+                      final email = _email.text;
+                      final password = _password.text;
+                      try {
+                        final userCredential = await FirebaseAuth.instance
+                            .signInWithEmailAndPassword(
+                                email: email, password: password);
+                        if (userCredential.user!.emailVerified) {
+                          // Navigator.of(context)
+                          //     .pushNamedAndRemoveUntil('/notes/', (_) => false);
+                          Navigator.of(context)
+                              .pushNamedAndRemoveUntil('/home/', (_) => false);
+                        } else {
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                              '/verify_email/', (_) => false);
+                        }
+                      } on FirebaseAuthException catch (e) {
+                        if (kDebugMode) {
+                          print(e.code);
+                        }
                       }
-                    }
-                  },
+                    },
                     child: const Text(
                       'Login',
                       style: TextStyle(color: Colors.black, fontSize: 15.0),
-                    )
-                  ),
-                
+                    )),
               ],
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mynotes/firebase_options.dart';
 
@@ -105,19 +106,28 @@ class _RegistrationViewState extends State<RegistrationView> {
                     final email = _email.text;
                     final password = _password.text;
                     try {
-                      final userCredential = await FirebaseAuth.instance
+                      await FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
                               email: email, password: password);
-                      print(userCredential);
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          '/verify_email/', (_) => false);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'weak-password') {
-                        print('The password provided is too weak.');
+                        if (kDebugMode) {
+                          print('The password provided is too weak.');
+                        }
                       } else if (e.code == 'email-already-in-use') {
-                        print('The account already exists for that email.');
+                        if (kDebugMode) {
+                          print('The account already exists for that email.');
+                        }
                       } else if (e.code == 'invalid-email') {
-                        print('The email address is badly formatted.');
+                        if (kDebugMode) {
+                          print('The email address is badly formatted.');
+                        }
                       } else {
-                        print(e.code);
+                        if (kDebugMode) {
+                          print(e.code);
+                        }
                       }
                     }
                   },
