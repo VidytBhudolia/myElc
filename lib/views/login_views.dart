@@ -122,10 +122,10 @@ class _LoginViewState extends State<LoginView> {
                               .signInWithEmailAndPassword(
                                   email: email, password: password);
                           if (userCredential.user!.emailVerified) {
-                            // Navigator.of(context)
-                            //     .pushNamedAndRemoveUntil('/notes/', (_) => false);
                             Navigator.of(context).pushNamedAndRemoveUntil(
-                                '/home/', (_) => false);
+                                '/notes/', (_) => false);
+                            // Navigator.of(context).pushNamedAndRemoveUntil(
+                            //     '/home/', (_) => false);
                           } else {
                             Navigator.of(context).pushNamedAndRemoveUntil(
                                 '/verify_email/', (_) => false);
@@ -140,12 +140,12 @@ class _LoginViewState extends State<LoginView> {
                         'Login',
                         style: TextStyle(color: Colors.black, fontSize: 15.0),
                       )),
-                      const Center(
-                      child: Text(
-                        'visawo2054@togito.com : 123456789',
-                        style: TextStyle(fontSize: 12),
-                      ),
+                  const Center(
+                    child: Text(
+                      'visawo2054@togito.com : 123456789',
+                      style: TextStyle(fontSize: 12),
                     ),
+                  ),
                 ],
               ),
             ),
