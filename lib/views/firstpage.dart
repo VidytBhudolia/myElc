@@ -110,19 +110,19 @@ class MyApp extends State<Firstpage> {
                   SizedBox(height: 10),
                   Text(
                     'Shreyas Mahajan (102317085)',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 18),
                   ),
                   Text(
                     'Shreyas Mahajan (102317085)',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 18),
                   ),
                   Text(
                     'Shreyas Mahajan (102317085)',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 18),
                   ),
                   Text(
                     'Shreyas Mahajan (102317085)',
-                    style: TextStyle(fontSize: 24),
+                    style: TextStyle(fontSize: 18),
                   ),
                 ],
               ),
