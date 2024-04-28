@@ -14,7 +14,9 @@ class MyApp extends State<Firstpage> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/background_image.png"),
+            // image: AssetImage("assets/background_image.png"),
+            image: AssetImage("assets/background_image_watermark.png"),
+
             // image: AssetImage("assets/bg_black.png"),
 
             fit: BoxFit.cover,
@@ -105,10 +107,6 @@ class MyApp extends State<Firstpage> {
               const SizedBox(height: 30),
               const Column(
                 children: [
-                  Text(
-                    'default:{ visawo2054@togito.com : 123456789 }',
-                    style: TextStyle(fontSize: 24),
-                  ),
                   SizedBox(height: 10),
                   Text(
                     'Shreyas Mahajan (102317085)',

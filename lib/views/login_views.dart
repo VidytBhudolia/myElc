@@ -33,6 +33,7 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
+        centerTitle: true,
         backgroundColor: Colors.blue,
       ),
       body: Center(
@@ -108,10 +109,10 @@ class _LoginViewState extends State<LoginView> {
                             .signInWithEmailAndPassword(
                                 email: email, password: password);
                         if (userCredential.user!.emailVerified) {
-                          Navigator.of(context)
-                              .pushNamedAndRemoveUntil('/notes/', (_) => false);
                           // Navigator.of(context)
-                          //     .pushNamedAndRemoveUntil('/home/', (_) => false);
+                          //     .pushNamedAndRemoveUntil('/notes/', (_) => false);
+                          Navigator.of(context)
+                              .pushNamedAndRemoveUntil('/home/', (_) => false);
                         } else {
                           Navigator.of(context).pushNamedAndRemoveUntil(
                               '/verify_email/', (_) => false);
