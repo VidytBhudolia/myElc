@@ -16,7 +16,9 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
       body: Container(
         decoration: BoxDecoration(
           image: const DecorationImage(
-            image: AssetImage("assets/background_image.png"),
+            // image: AssetImage("assets/background_image.png"),
+            image: AssetImage("assets/background_image_watermark.png"),
+
             // image: AssetImage("assets/bg_black.png"),
 
             fit: BoxFit.cover,
