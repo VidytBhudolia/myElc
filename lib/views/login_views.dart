@@ -140,6 +140,12 @@ class _LoginViewState extends State<LoginView> {
                         'Login',
                         style: TextStyle(color: Colors.black, fontSize: 15.0),
                       )),
+                      const Center(
+                      child: Text(
+                        'visawo2054@togito.com : 123456789',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
                 ],
               ),
             ),
