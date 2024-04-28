@@ -52,7 +52,7 @@ class _LoginViewState extends State<LoginView> {
             padding: const EdgeInsets.all(20.0),
             child: Container(
               width: 300,
-              height: 300, // Adjust the width as needed
+              height: 400, // Adjust the width as needed
               padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -70,7 +70,7 @@ class _LoginViewState extends State<LoginView> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const SizedBox(height: 30),
+                  // const SizedBox(height: 30),
                   TextField(
                     controller: _email,
                     enableSuggestions: false,
@@ -78,7 +78,7 @@ class _LoginViewState extends State<LoginView> {
                     keyboardType: TextInputType.emailAddress,
                     decoration: const InputDecoration(hintText: "Email "),
                   ),
-                  const SizedBox(height: 20), // Adjusted height
+                  // const SizedBox(height: 20), // Adjusted height
                   TextField(
                     controller: _password,
                     enableSuggestions: false,
@@ -86,7 +86,7 @@ class _LoginViewState extends State<LoginView> {
                     obscureText: true,
                     decoration: const InputDecoration(hintText: "Password "),
                   ),
-                  const SizedBox(height: 20),
+                  // const SizedBox(height: 20),
                   Center(
                     child: TextButton(
                       onPressed: () {
@@ -96,7 +96,7 @@ class _LoginViewState extends State<LoginView> {
                       child: const Text('Not Registered? Register Here! '),
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  // const SizedBox(height: 10),
                   ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
